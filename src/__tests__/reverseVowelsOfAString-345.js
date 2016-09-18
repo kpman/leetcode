@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import reverseVowels from '../reverse-vowels-of-a-string';
+import reverseVowels from '../reverseVowelsOfAString-345';
 
 test('should reverse vowels in the input string', t => {
   t.is(reverseVowels('aeiou'), 'uoiea');

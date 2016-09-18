@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import findPeakElement from '../find-peak-element';
+import findPeakElement from '../findPeakElement-162';
 
 test('should find a peak element and return its index', t => {
   t.is(findPeakElement([1, 2, 3, 4, 5, 6]), 5);

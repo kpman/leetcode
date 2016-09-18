@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import readBinaryWatch from '../readBinaryWatch';
+import readBinaryWatch from '../readBinaryWatch-401';
 
 test(`Given a non-negative integer n which represents the number of LEDs that are currently on,
 return all possible times the watch could represent.`, t => {
