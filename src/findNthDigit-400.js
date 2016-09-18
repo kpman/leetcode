@@ -32,6 +32,7 @@ var findNthDigit = function(n) {
     return +str.charAt(str.length - 1);
   }
   const str = `${Math.pow(10, i - 1) + set}`;
+  
   return +str.charAt(mod - 1);
 };
 

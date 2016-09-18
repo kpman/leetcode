@@ -55,6 +55,7 @@ var readBinaryWatch = function(num) {
       );
     }
   }
+  
   return totalObj[num] || [];
 };
 
