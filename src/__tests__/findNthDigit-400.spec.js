@@ -1,10 +1,8 @@
-import test from 'ava';
-
 import findNthDigit from '../findNthDigit-400';
 
-test('Find the nth digit of the infinite integer sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...', t => {
-  t.is(findNthDigit(9), 9);
-  t.is(findNthDigit(23), 6);
-  t.is(findNthDigit(20), 1);
-  t.is(findNthDigit(190), 1);
+it('Find the nth digit of the infinite integer sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...', () => {
+  expect(findNthDigit(9)).toBe(9);
+  expect(findNthDigit(23)).toBe(6);
+  expect(findNthDigit(20)).toBe(1);
+  expect(findNthDigit(190)).toBe(1);
 })

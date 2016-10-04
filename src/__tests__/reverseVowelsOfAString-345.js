@@ -1,14 +1,12 @@
-import test from 'ava';
-
 import reverseVowels from '../reverseVowelsOfAString-345';
 
-test('should reverse vowels in the input string', t => {
-  t.is(reverseVowels('aeiou'), 'uoiea');
-  t.is(reverseVowels('mouse'), 'meuso');
-  t.is(reverseVowels('cocacola'), 'cacocalo');
+it('should reverse vowels in the input string', () => {
+  expect(reverseVowels('aeiou')).toBe('uoiea');
+  expect(reverseVowels('mouse')).toBe('meuso');
+  expect(reverseVowels('cocacola')).toBe('cacocalo');
 });
 
-test('should return its self when input.length equals one', t => {
-  t.is(reverseVowels('a'), 'a');
-  t.is(reverseVowels('b'), 'b');
+it('should return its self when input.length equals one', () => {
+  expect(reverseVowels('a')).toBe('a');
+  expect(reverseVowels('b')).toBe('b');
 });

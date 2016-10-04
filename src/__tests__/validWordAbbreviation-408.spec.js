@@ -1,36 +1,34 @@
-import test from 'ava';
-
 import validWordAbbreviation from '../validWordAbbreviation-408';
 
-test('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', t => {
-  t.is(validWordAbbreviation('internationalization', 'i12iz4n'), true);
+it('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', () => {
+  expect(validWordAbbreviation('internationalization', 'i12iz4n')).toBe(true);
 });
 
-test('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', t => {
-  t.is(validWordAbbreviation('apple', 'a2e'), false);
+it('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', () => {
+  expect(validWordAbbreviation('apple', 'a2e')).toBe(false);
 });
 
-test('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', t => {
-  t.is(validWordAbbreviation('a', '01'), false);
+it('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', () => {
+  expect(validWordAbbreviation('a', '01')).toBe(false);
 });
 
-test('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', t => {
-  t.is(validWordAbbreviation('a', '2'), false);
+it('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', () => {
+  expect(validWordAbbreviation('a', '2')).toBe(false);
 });
 
-test('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', t => {
-  t.is(validWordAbbreviation('hi', '1'), false);
+it('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', () => {
+  expect(validWordAbbreviation('hi', '1')).toBe(false);
 });
 
-test('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', t => {
-  t.is(validWordAbbreviation('leetcode', '2e5'), true);
+it('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', () => {
+  expect(validWordAbbreviation('leetcode', '2e5')).toBe(true);
 });
 
-test('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', t => {
-  t.is(validWordAbbreviation('kpman', '5'), true);
-  t.is(validWordAbbreviation('kpmankpman', '5kp3'), true);
-  t.is(validWordAbbreviation('kpmankpman', '5kp2'), false);
-  t.is(validWordAbbreviation('kpmankpman', '5kp4'), false);
-  t.is(validWordAbbreviation('', '5kp4'), false);
-  t.is(validWordAbbreviation(' ', '5kp4'), false);
+it('Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.', () => {
+  expect(validWordAbbreviation('kpman', '5')).toBe(true);
+  expect(validWordAbbreviation('kpmankpman', '5kp3')).toBe(true);
+  expect(validWordAbbreviation('kpmankpman', '5kp2')).toBe(false);
+  expect(validWordAbbreviation('kpmankpman', '5kp4')).toBe(false);
+  expect(validWordAbbreviation('', '5kp4')).toBe(false);
+  expect(validWordAbbreviation(' ', '5kp4')).toBe(false);
 });
