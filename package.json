@@ -4,31 +4,15 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "ava"
+    "test": "jest"
   },
   "keywords": [],
   "author": "kpman",
   "license": "ISC",
-  "ava": {
-    "files": [
-      "src/**/__tests__/**/*.spec.js"
-    ],
-    "source": [
-      "src/**/*.js"
-    ],
-    "concurrency": 5,
-    "failFast": true,
-    "tap": false,
-    "verbose": true,
-    "require": [
-      "babel-register"
-    ],
-    "babel": "inherit"
-  },
   "devDependencies": {
-    "ava": "^0.16.0",
     "babel-cli": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
-    "babel-register": "^6.14.0"
+    "babel-register": "^6.14.0",
+    "jest": "^16.0.0"
   }
 }

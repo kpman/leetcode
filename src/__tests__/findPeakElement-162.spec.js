@@ -1,13 +1,11 @@
-import test from 'ava';
-
 import findPeakElement from '../findPeakElement-162';
 
-test('should find a peak element and return its index', t => {
-  t.is(findPeakElement([1, 2, 3, 4, 5, 6]), 5);
+it('should find a peak element and return its index', () => {
+  expect(findPeakElement([1, 2, 3, 4, 5, 6])).toBe(5);
 });
 
-test('should find a peak element and return one of its index', t => {
+it('should find a peak element and return one of its index', () => {
   const inputArr = [3, 4, 5, 6, 1, 2];
   const expected = [3, 5];
-  t.true(expected.includes(findPeakElement(inputArr)));
+  expect(expected.includes(findPeakElement(inputArr))).toBe(true);
 });
