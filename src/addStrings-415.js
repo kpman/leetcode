@@ -5,66 +5,16 @@
  * @return {string}
  */
 var addStrings = function(num1, num2) {
+  let i = num1.length - 1;
+  let j = num2.length - 1;
+  let carrier = 0;
   let answer = '';
-  let moreThanTen = false;
-
-  if (num1.length < num2.length) {
-    const tmp = num1;
-    num1 = num2;
-    num2 = tmp;
+  while (i >= 0 || j >= 0 || carrier > 0) {
+    const add = +(i >= 0 ? num1.charAt(i--) : 0) + +(j >= 0 ? num2.charAt(j--) : 0) + carrier;
+    answer = add % 10 + answer;
+    carrier = Math.floor(add / 10);
   }
-
-  const num1Length = num1.length;
-  const num2Length = num2.length;
-
-  function sumString(str1, str2) {
-    const sum = (+str1) + (+str2);
-    if (sum > 9) {
-      return {
-        digital: sum % 10,
-        moreThanTen: true,
-      }
-    }
-    return {
-      digital: sum,
-      moreThanTen: false,
-    }
-  }
-
-  for (let i = 0; i < num1Length; i += 1) {
-    if (i < num2Length) {
-      let result = sumString(num1.charAt(num1Length - i - 1), num2.charAt(num2Length - i - 1));
-      if (moreThanTen) {
-        const sum = result.digital + 1;
-        if (sum > 9) {
-          result.moreThanTen = true;
-        }
-        answer = sum % 10 + answer;
-      } else {
-        answer = result.digital + answer;
-      }
-      moreThanTen = result.moreThanTen;
-    } else {
-      const str = num1.charAt(num1Length - i - 1);
-      if (moreThanTen) {
-        moreThanTen = false;
-        const sum = +str + 1;
-        if (sum > 9) {
-          moreThanTen = true;
-        }
-        answer = sum % 10 + answer;
-
-      } else {
-        answer = str + answer;
-      }
-    }
-  }
-
-  if (num1Length === num2Length && moreThanTen || moreThanTen) {
-    answer = '1' + answer;
-  }
-
   return answer;
-};
+}
 
 export default addStrings;
