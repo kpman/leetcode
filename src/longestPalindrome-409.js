@@ -3,11 +3,11 @@
 * @param {string} s
 * @return {number}
 */
-var longestPalindrome = function(s) {
+const longestPalindrome = s => {
   const repeatArr = {};
   let answer = 0;
   let maxOdd = 0;
-  for (let i = 0 ; i < s.length; i++) {
+  for (let i = 0; i < s.length; i += 1) {
     if (repeatArr[s.charAt(i)]) {
       repeatArr[s.charAt(i)] = repeatArr[s.charAt(i)] + 1;
     } else {

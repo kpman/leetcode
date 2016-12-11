@@ -4,10 +4,10 @@
  * @param {number} k
  * @return {string}
  */
-var removeKdigits = function(num, k) {
-  function getAllPickNumSet(length, k) {
-
-  }
+const removeKdigits = (num, k) => {
+  // TDD
+  console.log('not implement', num, k);
+  return null;
 };
 
 export default removeKdigits;
