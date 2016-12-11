@@ -3,8 +3,8 @@
  * @param {number} n
  * @return {number}
  */
-var sample = function(n) {
-  return n
+const sample = n => { // eslint-disable-line
+  return n;
 };
 
 export default sample;

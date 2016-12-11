@@ -4,7 +4,7 @@
  * @param {string} abbr
  * @return {boolean}
  */
-var validWordAbbreviation = function(word, abbr) {
+const validWordAbbreviation = (word, abbr) => {
   const abbrArr = abbr.split(/(\d+)/).filter(Boolean);
   const wordArr = word.split('');
   let j = 0;
@@ -14,15 +14,15 @@ var validWordAbbreviation = function(word, abbr) {
       if (/^0\d+/.test(abbrArr[i])) {
         return false;
       }
-      j = j + Number(abbrArr[i]);
+      j += Number(abbrArr[i]);
       if (j > wordArr.length) return false;
-      continue;
+      continue; // eslint-disable-line no-continue
     }
     for (let k = 0; k < abbrArr[i].length; k++) {
       if (abbrArr[i][k] !== wordArr[j]) {
         return false;
       }
-      j++;
+      j += 1;
     }
   }
   if (j < wordArr.length) return false;

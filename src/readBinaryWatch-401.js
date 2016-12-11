@@ -3,13 +3,13 @@
  * @param {number} num
  * @return {string[]}
  */
-var readBinaryWatch = function(num) {
+const readBinaryWatch = num => {
   const hoursObj = {};
   const minsObj = {};
   const totalObj = {};
 
   function getBinaryNum(n) {
-    return (n >>> 0).toString(2).split('').filter(i => i === '1').length;
+    return (n >>> 0).toString(2).split('').filter(i => i === '1').length; // eslint-disable-line no-bitwise
   }
 
   function getCombine(a, b) {
@@ -55,7 +55,7 @@ var readBinaryWatch = function(num) {
       );
     }
   }
-  
+
   return totalObj[num] || [];
 };
 
