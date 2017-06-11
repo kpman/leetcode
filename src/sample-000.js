@@ -3,7 +3,8 @@
  * @param {number} n
  * @return {number}
  */
-const sample = n => { // eslint-disable-line
+// eslint-disable-next-line
+const sample = n => {
   return n;
 };
 
